@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Postal Forecast</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body data-weather="clear">
+    <main class="app-shell">
+      <section class="control-panel" aria-labelledby="app-title">
+        <div class="sky-scene" aria-hidden="true">
+          <span class="scene-sun"></span>
+          <span class="scene-cloud scene-cloud-a"></span>
+          <span class="scene-cloud scene-cloud-b"></span>
+          <span class="scene-rain scene-rain-a"></span>
+          <span class="scene-rain scene-rain-b"></span>
+        </div>
+
+        <p class="eyebrow">5-day local outlook</p>
+        <h1 id="app-title">Forecast by postal code</h1>
+        <p class="tagline">A quiet read on what the sky has lined up next.</p>
+
+        <form class="forecast-form" id="forecast-form" novalidate>
+          <div class="field-grid">
+            <div class="field">
+              <label for="postal-code">Postal code</label>
+              <input id="postal-code" name="postal-code" type="text" inputmode="text" autocomplete="postal-code" placeholder="10001">
+            </div>
+
+            <div class="field">
+              <label for="country-code">Country</label>
+              <select id="country-code" name="country-code">
+                <option value="us">United States</option>
+                <option value="ca">Canada</option>
+                <option value="gb">United Kingdom</option>
+                <option value="au">Australia</option>
+                <option value="de">Germany</option>
+                <option value="fr">France</option>
+                <option value="it">Italy</option>
+                <option value="nl">Netherlands</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="action-row">
+            <div class="unit-toggle" role="group" aria-label="Units">
+              <button type="button" class="unit-button active" data-unit="fahrenheit" aria-label="Fahrenheit" aria-pressed="true">F</button>
+              <button type="button" class="unit-button" data-unit="celsius" aria-label="Celsius" aria-pressed="false">C</button>
+            </div>
+
+            <button type="submit" class="primary-button" id="submit-button">
+              <span class="button-icon" aria-hidden="true"></span>
+              <span>Get forecast</span>
+            </button>
+          </div>
+        </form>
+
+        <p class="status-message" id="status-message" role="status" aria-live="polite">Ready for a postal code.</p>
+      </section>
+
+      <section class="forecast-panel" aria-label="Forecast results">
+        <div class="current-summary" id="current-summary">
+          <div>
+            <p class="summary-label">Today</p>
+            <h2>Local forecast</h2>
+          </div>
+          <div class="summary-temp" aria-hidden="true">--</div>
+        </div>
+
+        <div class="forecast-grid" id="forecast-grid">
+          <article class="forecast-card ghost-card">
+            <span class="ghost-line short"></span>
+            <span class="ghost-icon"></span>
+            <span class="ghost-line"></span>
+            <span class="ghost-line thin"></span>
+          </article>
+          <article class="forecast-card ghost-card">
+            <span class="ghost-line short"></span>
+            <span class="ghost-icon"></span>
+            <span class="ghost-line"></span>
+            <span class="ghost-line thin"></span>
+          </article>
+          <article class="forecast-card ghost-card">
+            <span class="ghost-line short"></span>
+            <span class="ghost-icon"></span>
+            <span class="ghost-line"></span>
+            <span class="ghost-line thin"></span>
+          </article>
+          <article class="forecast-card ghost-card">
+            <span class="ghost-line short"></span>
+            <span class="ghost-icon"></span>
+            <span class="ghost-line"></span>
+            <span class="ghost-line thin"></span>
+          </article>
+          <article class="forecast-card ghost-card">
+            <span class="ghost-line short"></span>
+            <span class="ghost-icon"></span>
+            <span class="ghost-line"></span>
+            <span class="ghost-line thin"></span>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
