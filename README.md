@@ -16,3 +16,7 @@ Then visit `http://127.0.0.1:5174`.
 
 - Postal lookup: Zippopotam.us
 - Forecast data: Open-Meteo
+
+## About
+
+This project is a simple weather forecast app built with HTML, CSS, and JavaScript. Enter a postal code to see the current weather and a 5-day forecast.
